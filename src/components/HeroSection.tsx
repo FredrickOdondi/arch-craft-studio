@@ -5,37 +5,36 @@ import { ChevronDown } from 'lucide-react';
 const HeroSection = () => {
   return (
     <section id="home" className="relative h-screen flex items-center justify-center overflow-hidden">
-      {/* Background Image */}
-      <div 
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style={{
-          backgroundImage: 'url("https://images.unsplash.com/photo-1487958449943-2429e8be8625?ixlib=rb-4.0.3&auto=format&fit=crop&w=6000&q=80")'
-        }}
-      >
-        <div className="absolute inset-0 bg-black/40"></div>
+      {/* Background with gradient overlay */}
+      <div className="absolute inset-0 bg-gradient-to-br from-black via-gray-900 to-black">
+        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-black/60"></div>
+        {/* Geometric pattern overlay */}
+        <div className="absolute inset-0 opacity-10">
+          <div className="h-full w-full bg-gradient-to-br from-white/20 to-transparent"></div>
+        </div>
       </div>
 
       {/* Content */}
-      <div className="relative z-10 text-center text-white max-w-4xl mx-auto px-6">
-        <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight animate-fade-in">
-          Designing the
-          <span className="block text-blue-400">Future</span>
+      <div className="relative z-10 text-center text-white max-w-6xl mx-auto px-6">
+        <h1 className="text-6xl md:text-8xl font-bold mb-8 leading-tight animate-fade-in">
+          Designing Kenya's
+          <span className="block text-white drop-shadow-2xl">Future</span>
         </h1>
-        <p className="text-xl md:text-2xl mb-8 opacity-90 animate-fade-in max-w-2xl mx-auto">
-          One Space at a Time. Creating innovative architectural solutions that inspire and endure.
+        <p className="text-xl md:text-2xl mb-10 opacity-90 animate-fade-in max-w-3xl mx-auto leading-relaxed">
+          Premier architectural solutions for modern Kenyan living. Creating innovative spaces that reflect our heritage and embrace tomorrow.
         </p>
-        <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in">
+        <div className="flex flex-col sm:flex-row gap-6 justify-center animate-fade-in">
           <a 
             href="#portfolio" 
-            className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105"
+            className="bg-white text-black px-10 py-4 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 hover:shadow-2xl border-2 border-white"
           >
-            Explore Our Work
+            Explore Our Kenyan Projects
           </a>
           <a 
             href="#contact" 
-            className="border-2 border-white text-white hover:bg-white hover:text-gray-900 px-8 py-4 rounded-lg font-semibold transition-all duration-300"
+            className="border-2 border-white text-white hover:bg-white hover:text-black px-10 py-4 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105"
           >
-            Start Your Project
+            Start Your Dream Home
           </a>
         </div>
       </div>
