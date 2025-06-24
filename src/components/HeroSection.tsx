@@ -8,9 +8,9 @@ const HeroSection = () => {
       {/* Background Image */}
       <div className="absolute inset-0">
         <img 
-          src="https://archi-monarch.com/wp-content/uploads/2023/02/FUTURE-OF-RESIDENTIAL-BUILDING-DESIGN-IN-ARCHITECTURE.webp"
+          src="/lovable-uploads/6702865e-f31d-4f22-a824-ab8468fd1354.png"
           alt="Modern Kenyan Architecture"
-          className="w-full h-full object-contain"
+          className="w-full h-full object-cover"
         />
         {/* Gradient overlay for better text readability */}
         <div className="absolute inset-0 bg-gradient-to-br from-black/70 via-black/50 to-black/70"></div>
