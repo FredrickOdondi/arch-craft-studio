@@ -5,13 +5,15 @@ import { ChevronDown } from 'lucide-react';
 const HeroSection = () => {
   return (
     <section id="home" className="relative h-screen flex items-center justify-center overflow-hidden">
-      {/* Background with gradient overlay */}
-      <div className="absolute inset-0 bg-gradient-to-br from-black via-gray-900 to-black">
-        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-black/60"></div>
-        {/* Geometric pattern overlay */}
-        <div className="absolute inset-0 opacity-10">
-          <div className="h-full w-full bg-gradient-to-br from-white/20 to-transparent"></div>
-        </div>
+      {/* Background Image */}
+      <div className="absolute inset-0">
+        <img 
+          src="/lovable-uploads/6702865e-f31d-4f22-a824-ab8468fd1354.png"
+          alt="Modern Kenyan Architecture"
+          className="w-full h-full object-cover"
+        />
+        {/* Gradient overlay for better text readability */}
+        <div className="absolute inset-0 bg-gradient-to-br from-black/70 via-black/50 to-black/70"></div>
       </div>
 
       {/* Content */}

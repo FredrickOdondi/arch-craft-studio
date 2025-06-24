@@ -33,53 +33,53 @@ const ContactSection = () => {
     {
       icon: Phone,
       title: 'Phone',
-      details: '+1 (555) 123-4567',
-      link: 'tel:+15551234567'
+      details: '+254 701 234 567',
+      link: 'tel:+254701234567'
     },
     {
       icon: Mail,
       title: 'Email',
-      details: 'hello@apexarch.com',
-      link: 'mailto:hello@apexarch.com'
+      details: 'info@vndesigntech.co.ke',
+      link: 'mailto:info@vndesigntech.co.ke'
     },
     {
       icon: Map,
       title: 'Office',
-      details: '123 Design Street, Creative District, NY 10001',
+      details: 'Westlands, Nairobi, Kenya',
       link: 'https://maps.google.com'
     }
   ];
 
   return (
-    <section id="contact" className="py-20 bg-white">
+    <section id="contact" className="py-20 bg-gray-50">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+          <h2 className="text-5xl md:text-6xl font-bold text-black mb-6">
             Let's Create Something
-            <span className="text-blue-600"> Amazing</span>
+            <span className="block text-gray-600"> Amazing Together</span>
           </h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Ready to bring your architectural vision to life? Get in touch with our team 
+          <p className="text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed">
+            Ready to bring your architectural vision to life in Kenya? Get in touch with our team 
             to discuss your project and explore the possibilities.
           </p>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
           {/* Contact Information */}
-          <div>
-            <h3 className="text-2xl font-bold text-gray-900 mb-8">Get in Touch</h3>
-            <div className="space-y-6">
+          <div className="bg-white p-10 rounded-2xl shadow-2xl depth-card">
+            <h3 className="text-3xl font-bold text-black mb-10">Get in Touch</h3>
+            <div className="space-y-8">
               {contactInfo.map((info, index) => (
-                <div key={index} className="flex items-center space-x-4">
-                  <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center">
-                    <info.icon className="w-6 h-6 text-blue-600" />
+                <div key={index} className="flex items-center space-x-6 p-4 rounded-xl hover:bg-gray-50 transition-all duration-300">
+                  <div className="w-16 h-16 bg-black rounded-xl flex items-center justify-center shadow-lg">
+                    <info.icon className="w-8 h-8 text-white" />
                   </div>
                   <div>
-                    <h4 className="font-semibold text-gray-900">{info.title}</h4>
+                    <h4 className="text-xl font-semibold text-black mb-1">{info.title}</h4>
                     <a 
                       href={info.link}
-                      className="text-gray-600 hover:text-blue-600 transition-colors duration-300"
+                      className="text-gray-600 hover:text-black transition-colors duration-300 text-lg"
                     >
                       {info.details}
                     </a>
@@ -89,22 +89,23 @@ const ContactSection = () => {
             </div>
 
             {/* Map Placeholder */}
-            <div className="mt-8">
-              <div className="w-full h-64 bg-gray-200 rounded-lg flex items-center justify-center">
-                <div className="text-center text-gray-500">
-                  <Map className="w-12 h-12 mx-auto mb-2" />
-                  <p>Interactive Map</p>
-                  <p className="text-sm">Our office location</p>
+            <div className="mt-10">
+              <div className="w-full h-64 bg-gradient-to-br from-black to-gray-800 rounded-xl flex items-center justify-center shadow-xl">
+                <div className="text-center text-white">
+                  <Map className="w-16 h-16 mx-auto mb-4" />
+                  <p className="text-lg font-semibold">Nairobi Office</p>
+                  <p className="text-sm opacity-75">Westlands, Nairobi</p>
                 </div>
               </div>
             </div>
           </div>
 
           {/* Contact Form */}
-          <div>
+          <div className="bg-white p-10 rounded-2xl shadow-2xl depth-card">
+            <h3 className="text-3xl font-bold text-black mb-8">Start Your Project</h3>
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>
-                <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
+                <label htmlFor="name" className="block text-lg font-semibold text-black mb-3">
                   Full Name
                 </label>
                 <input
@@ -114,13 +115,13 @@ const ContactSection = () => {
                   value={formData.name}
                   onChange={handleInputChange}
                   required
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-600 focus:border-transparent transition-all duration-300"
+                  className="w-full px-6 py-4 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-black focus:border-black transition-all duration-300 text-lg"
                   placeholder="Your full name"
                 />
               </div>
 
               <div>
-                <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
+                <label htmlFor="email" className="block text-lg font-semibold text-black mb-3">
                   Email Address
                 </label>
                 <input
@@ -130,13 +131,13 @@ const ContactSection = () => {
                   value={formData.email}
                   onChange={handleInputChange}
                   required
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-600 focus:border-transparent transition-all duration-300"
+                  className="w-full px-6 py-4 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-black focus:border-black transition-all duration-300 text-lg"
                   placeholder="your.email@example.com"
                 />
               </div>
 
               <div>
-                <label htmlFor="projectType" className="block text-sm font-medium text-gray-700 mb-2">
+                <label htmlFor="projectType" className="block text-lg font-semibold text-black mb-3">
                   Project Type
                 </label>
                 <select
@@ -145,18 +146,18 @@ const ContactSection = () => {
                   value={formData.projectType}
                   onChange={handleInputChange}
                   required
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-600 focus:border-transparent transition-all duration-300"
+                  className="w-full px-6 py-4 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-black focus:border-black transition-all duration-300 text-lg"
                 >
                   <option value="">Select project type</option>
-                  <option value="residential">Residential</option>
-                  <option value="commercial">Commercial</option>
-                  <option value="public">Public</option>
-                  <option value="consultation">Consultation</option>
+                  <option value="residential">Residential Home</option>
+                  <option value="commercial">Commercial Building</option>
+                  <option value="renovation">Home Renovation</option>
+                  <option value="consultation">Design Consultation</option>
                 </select>
               </div>
 
               <div>
-                <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
+                <label htmlFor="message" className="block text-lg font-semibold text-black mb-3">
                   Project Details
                 </label>
                 <textarea
@@ -166,17 +167,17 @@ const ContactSection = () => {
                   onChange={handleInputChange}
                   required
                   rows={5}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-600 focus:border-transparent transition-all duration-300"
+                  className="w-full px-6 py-4 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-black focus:border-black transition-all duration-300 text-lg"
                   placeholder="Tell us about your project, timeline, and any specific requirements..."
                 ></textarea>
               </div>
 
               <button
                 type="submit"
-                className="w-full bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300 flex items-center justify-center space-x-2 group"
+                className="w-full bg-black hover:bg-gray-800 text-white px-8 py-5 rounded-xl font-semibold text-lg transition-all duration-300 flex items-center justify-center space-x-3 group shadow-xl hover:shadow-2xl transform hover:scale-105"
               >
                 <span>Send Message</span>
-                <Send className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
+                <Send className="w-6 h-6 group-hover:translate-x-1 transition-transform duration-300" />
               </button>
             </form>
           </div>
