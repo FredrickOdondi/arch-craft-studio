@@ -66,17 +66,17 @@ const Footer = () => {
 
         {/* Bottom Bar */}
         <div className="border-t border-white/10 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
-          <p className="text-gray-300 text-sm">
-            © 2024 VN Design Tech. All rights reserved.
+          <p className="text-gray-600 text-sm">
+            © 2025 VN Design Tech. All rights reserved.
           </p>
           <div className="flex space-x-6 mt-4 md:mt-0">
-            <a href="#" className="text-gray-300 hover:text-white text-sm transition-colors duration-300">
+            <a href="#" className="text-gray-600 hover:text-white text-sm transition-colors duration-300">
               Privacy Policy
             </a>
-            <a href="#" className="text-gray-300 hover:text-white text-sm transition-colors duration-300">
+            <a href="#" className="text-gray-600 hover:text-white text-sm transition-colors duration-300">
               Terms of Service
             </a>
-            <a href="#" className="text-gray-300 hover:text-white text-sm transition-colors duration-300">
+            <a href="#" className="text-gray-600 hover:text-white text-sm transition-colors duration-300">
               Cookie Policy
             </a>
           </div>
