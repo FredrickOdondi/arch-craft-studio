@@ -4,7 +4,7 @@ import { Facebook, Instagram, Linkedin, Twitter } from 'lucide-react';
 
 const Footer = () => {
   const socialLinks = [
-    { icon: Threads, href: '#', label: 'Threads' },
+    { icon: Threads, href: 'https://www.threads.net/@vn_design_tech_ke', label: 'Threads' },
     { icon: Instagram, href: 'https://www.instagram.com/architect_victor_n?igsh=MXNteGFzM2NucWhtaQ==', label: 'Instagram' },
     { icon: Linkedin, href: '#', label: 'LinkedIn' },
     { icon: Twitter, href: '#', label: 'Twitter' }
