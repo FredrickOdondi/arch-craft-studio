@@ -18,7 +18,7 @@ const HeroSection = () => {
 
       {/* Content */}
       <div className="relative z-10 text-center text-white max-w-6xl mx-auto px-6">
-        <h1 className="text-6xl md:text-8xl font-bold mb-8 leading-tight animate-fade-in">
+        <h1 className="text-4xl md:text-6xl font-bold mb-8 leading-tight animate-fade-in">
           Designing Kenya's
           <span className="block text-white drop-shadow-2xl">Future</span>
         </h1>
