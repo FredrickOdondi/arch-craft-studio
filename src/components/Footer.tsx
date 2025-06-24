@@ -26,7 +26,7 @@ const Footer = () => {
             <h3 className="text-2xl font-bold mb-4 gradient-text">
               VN<span className="text-white">DESIGNTECH</span>
             </h3>
-            <p className="text-gray-300 mb-6 leading-relaxed">
+            <p className="text-gray-600 mb-6 leading-relaxed">
               Creating innovative architectural solutions across Kenya that inspire and endure. 
               We design spaces that enhance lives and communities.
             </p>
@@ -53,7 +53,7 @@ const Footer = () => {
                   <li key={index}>
                     <a 
                       href="#" 
-                      className="text-gray-300 hover:text-white transition-colors duration-300"
+                      className="text-gray-600 hover:text-white transition-colors duration-300"
                     >
                       {link}
                     </a>
