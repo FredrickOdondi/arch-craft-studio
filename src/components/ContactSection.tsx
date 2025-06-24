@@ -33,19 +33,20 @@ const ContactSection = () => {
     {
       icon: Phone,
       title: 'Phone',
-      details: '+254 701 234 567',
-      link: 'tel:+254701234567'
+      details: '+254 798248779',
+      details: '+254 792222180',
+      link: 'tel:+254798248779'
     },
     {
       icon: Mail,
       title: 'Email',
-      details: 'info@vndesigntech.co.ke',
-      link: 'mailto:info@vndesigntech.co.ke'
+      details: 'vndesigntech@gmail.com',
+      link: 'mailto:vndesigntech@gmail.com'
     },
     {
       icon: Map,
       title: 'Office',
-      details: 'Westlands, Nairobi, Kenya',
+      details: 'Dafaco plaza, Ngong, Vet',
       link: 'https://maps.google.com'
     }
   ];
