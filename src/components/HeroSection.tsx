@@ -8,7 +8,7 @@ const HeroSection = () => {
       {/* Background Image */}
       <div className="absolute inset-0">
         <img 
-          src="/lovable-uploads/6702865e-f31d-4f22-a824-ab8468fd1354.png"
+          src="https://www.google.com/url?sa=i&url=https%3A%2F%2Ftopdot.ca%2FBlog%2Fchoose-an-architecture-firm-in-toronto.html&psig=AOvVaw0R-jpytyXSMztO1AgCxtNi&ust=1750851160694000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCIDMyof7iY4DFQAAAAAdAAAAABAL"
           alt="Modern Kenyan Architecture"
           className="w-full h-full object-cover"
         />
