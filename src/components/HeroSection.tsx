@@ -8,7 +8,7 @@ const HeroSection = () => {
       {/* Background Image */}
       <div className="absolute inset-0">
         <img 
-          src="/lovable-uploads/6702865e-f31d-4f22-a824-ab8468fd1354.png"
+          src="https://archi-monarch.com/wp-content/uploads/2023/02/FUTURE-OF-RESIDENTIAL-BUILDING-DESIGN-IN-ARCHITECTURE.webp"
           alt="Modern Kenyan Architecture"
           className="w-full h-full object-cover"
         />
