@@ -10,7 +10,7 @@ const HeroSection = () => {
         <img 
           src="https://archi-monarch.com/wp-content/uploads/2023/02/FUTURE-OF-RESIDENTIAL-BUILDING-DESIGN-IN-ARCHITECTURE.webp"
           alt="Modern Kenyan Architecture"
-          className="w-full h-full object-cover"
+          className="w-full h-full object-contain"
         />
         {/* Gradient overlay for better text readability */}
         <div className="absolute inset-0 bg-gradient-to-br from-black/70 via-black/50 to-black/70"></div>
