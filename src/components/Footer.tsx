@@ -30,7 +30,7 @@ const Footer = () => {
               Creating innovative architectural solutions across Kenya that inspire and endure. 
               We design spaces that enhance lives and communities.
             </p>
-            <div className="flex space-x-4">
+            <div className="flex space-x-4" bg-gray-600>
               {socialLinks.map((social, index) => (
                 <a
                   key={index}
