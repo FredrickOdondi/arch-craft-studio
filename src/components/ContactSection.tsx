@@ -94,8 +94,8 @@ const ContactSection = () => {
               <div className="w-full h-64 bg-gradient-to-br from-black to-gray-800 rounded-xl flex items-center justify-center shadow-xl">
                 <div className="text-center text-white">
                   <Map className="w-16 h-16 mx-auto mb-4" />
-                  <p className="text-lg font-semibold">Nairobi Office</p>
-                  <p className="text-sm opacity-75">Westlands, Nairobi</p>
+                  <p className="text-lg font-semibold">Our Office</p>
+                  <p className="text-sm opacity-75">Dafaco plaza, Ngong, Vet</p>
                 </div>
               </div>
             </div>
