@@ -1,7 +1,8 @@
 
 import React, { useState, useEffect } from 'react';
-import { Plus, Edit, Trash2, ArrowLeft } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { Plus, ArrowLeft, LogOut } from 'lucide-react';
+import { Link, useNavigate } from 'react-router-dom';
+import { useAuth } from '../hooks/useAuth';
 import AdminProjectForm from '../components/AdminProjectForm';
 import AdminProjectCard from '../components/AdminProjectCard';
 
@@ -21,13 +22,23 @@ export interface Project {
 }
 
 const Admin = () => {
+  const { isAuthenticated, isLoading, logout } = useAuth();
+  const navigate = useNavigate();
   const [projects, setProjects] = useState<Project[]>([]);
   const [showForm, setShowForm] = useState(false);
   const [editingProject, setEditingProject] = useState<Project | null>(null);
 
   useEffect(() => {
-    loadProjects();
-  }, []);
+    if (!isLoading && !isAuthenticated) {
+      navigate('/admin-login');
+    }
+  }, [isAuthenticated, isLoading, navigate]);
+
+  useEffect(() => {
+    if (isAuthenticated) {
+      loadProjects();
+    }
+  }, [isAuthenticated]);
 
   const loadProjects = () => {
     const savedProjects = localStorage.getItem('portfolioProjects');
@@ -66,6 +77,26 @@ const Admin = () => {
     saveProjects(updatedProjects);
   };
 
+  const handleLogout = () => {
+    logout();
+    navigate('/admin-login');
+  };
+
+  if (isLoading) {
+    return (
+      <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-black flex items-center justify-center">
+        <div className="glass bg-white/10 p-8 rounded-2xl">
+          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-white mx-auto"></div>
+          <p className="text-white mt-4">Loading...</p>
+        </div>
+      </div>
+    );
+  }
+
+  if (!isAuthenticated) {
+    return null;
+  }
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-black">
       <div className="max-w-7xl mx-auto px-6 lg:px-8 py-8">
@@ -83,13 +114,23 @@ const Admin = () => {
             </h1>
           </div>
           
-          <button
-            onClick={() => setShowForm(true)}
-            className="glass bg-white/10 border border-white/20 px-6 py-3 rounded-lg text-white hover:bg-white/20 transition-all duration-300 flex items-center space-x-2"
-          >
-            <Plus className="w-5 h-5" />
-            <span>Add Project</span>
-          </button>
+          <div className="flex items-center space-x-4">
+            <button
+              onClick={() => setShowForm(true)}
+              className="glass bg-white/10 border border-white/20 px-6 py-3 rounded-lg text-white hover:bg-white/20 transition-all duration-300 flex items-center space-x-2"
+            >
+              <Plus className="w-5 h-5" />
+              <span>Add Project</span>
+            </button>
+            
+            <button
+              onClick={handleLogout}
+              className="glass bg-red-500/20 border border-red-500/30 px-6 py-3 rounded-lg text-white hover:bg-red-500/30 transition-all duration-300 flex items-center space-x-2"
+            >
+              <LogOut className="w-5 h-5" />
+              <span>Logout</span>
+            </button>
+          </div>
         </div>
 
         {/* Projects Grid */}
