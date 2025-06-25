@@ -1,15 +1,17 @@
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Eye, ArrowRight, MapPin, Calendar } from 'lucide-react';
 import ProjectDetail from './ProjectDetail';
 
 const PortfolioSection = () => {
   const [activeFilter, setActiveFilter] = useState('All');
   const [selectedProject, setSelectedProject] = useState(null);
+  const [projects, setProjects] = useState([]);
 
   const filters = ['All', 'Residential', 'Commercial', 'Modern Villas'];
 
-  const projects = [
+  // Default projects as fallback
+  const defaultProjects = [
     {
       id: 1,
       title: 'Modern Kenyan Family Villa',
@@ -107,6 +109,23 @@ const PortfolioSection = () => {
       ]
     }
   ];
+
+  useEffect(() => {
+    loadProjects();
+  }, []);
+
+  const loadProjects = () => {
+    const savedProjects = localStorage.getItem('portfolioProjects');
+    if (savedProjects) {
+      const parsedProjects = JSON.parse(savedProjects);
+      if (parsedProjects.length > 0) {
+        setProjects(parsedProjects);
+        return;
+      }
+    }
+    // Fall back to default projects if no saved projects
+    setProjects(defaultProjects);
+  };
 
   const filteredProjects = activeFilter === 'All' 
     ? projects 
